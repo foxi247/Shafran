@@ -18,6 +18,13 @@ if (window.Telegram && window.Telegram.WebApp) {
   tg.expand();
 }
 
+// Loader hide after animation
+const loader = document.getElementById('loader');
+if (loader) {
+  setTimeout(() => loader.classList.add('hide'), 2000);
+  setTimeout(() => loader.remove(), 2500);
+}
+
 // Form submission stub (send to bot endpoint placeholder)
 const form = document.getElementById('lead-form');
 const statusEl = document.getElementById('form-status');

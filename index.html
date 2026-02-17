@@ -7,6 +7,12 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Loader with sliding house effect -->
+  <div id="loader">
+    <div class="loader-house"></div>
+    <div class="loader-text">Шафран загружается...</div>
+  </div>
+
   <header class="nav">
     <div class="logo">ЖК Шафран</div>
     <nav>
@@ -26,36 +32,38 @@
       <div class="hero-text">
         <p class="badge">Дербент · Семейный комфорт</p>
         <h1>ЖК Шафран</h1>
-        <p class="lead">Живите в окружении готовой инфраструктуры: садик, школа, магазины и благоустроенный двор — всё рядом. Современные планировки для семей и пар.</p>
+        <p class="lead">Комфортный комплекс для семей и пар. Инфраструктура под рукой: садик, школа, магазины, безопасные дворы и парковка. Экономьте время — живите ближе к нужному.</p>
         <div class="hero-actions">
-          <button class="btn primary" data-scroll="#contact">Записаться на просмотр</button>
-          <button class="btn ghost" data-scroll="#benefits">Узнать преимущества</button>
+          <button class="btn primary" data-scroll="#contact">Оставить заявку</button>
+          <button class="btn ghost" data-scroll="#benefits">Преимущества</button>
         </div>
       </div>
-      <div class="hero-visual hero-bg"></div>
+      <div class="hero-visual">
+        <div class="card-visual">Уютные дворы · Планировки для семей · Готовая инфраструктура</div>
+      </div>
     </section>
 
     <section id="about" class="section">
       <div class="section-title"><span>О комплексе</span></div>
-      <p class="muted">ЖК Шафран — современный комплекс в Дербенте с акцентом на комфорт и время семьи. Тёплая архитектура, зелёные дворы, безопасные пространства для детей, удобная парковка и шаговая доступность важной инфраструктуры.</p>
+      <p class="muted">ЖК Шафран — современный жилой комплекс в Дербенте. Готовая инфраструктура: садик, школа, магазины, благоустроенные дворы, парковка и безопасная среда для детей.</p>
     </section>
 
     <section id="benefits" class="section cards">
       <div class="section-title"><span>Преимущества</span></div>
       <div class="grid">
-        <div class="card"><h3>Инфраструктура рядом</h3><p>Садик, школа, магазины и сервисы — меньше поездок, больше времени с близкими.</p></div>
-        <div class="card"><h3>Благоустроенные дворы</h3><p>Озеленение, детские и спортивные площадки, подсветка и комфортные зоны отдыха.</p></div>
-        <div class="card"><h3>Планировки для семьи</h3><p>1–3 комнат, кухня-гостиная, балконы и места для хранения. Светло и функционально.</p></div>
-        <div class="card"><h3>Парковка и комфорт</h3><p>Понятный выезд, удобные места для жителей, продуманная навигация по двору.</p></div>
+        <div class="card"><h3>Инфраструктура</h3><p>Садик и школа рядом, магазины в шаговой доступности. Меньше поездок — больше времени с семьёй.</p></div>
+        <div class="card"><h3>Уютные дворы</h3><p>Озеленение, детские и спортивные площадки, освещение и зоны отдыха.</p></div>
+        <div class="card"><h3>Планировки</h3><p>1–3 комнаты: светлые кухни-гостиные, балконы, гардеробные. Гибко под семью.</p></div>
+        <div class="card"><h3>Парковка</h3><p>Удобные парковочные места и понятный выезд. Комфорт для автомобилистов.</p></div>
       </div>
     </section>
 
     <section id="plans" class="section">
       <div class="section-title"><span>Планировки</span></div>
       <div class="grid plans">
-        <div class="card"><h4>1-комн.</h4><p class="muted">Для пар: кухня-гостиная, спальня, лоджия. Комфортный старт.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
-        <div class="card"><h4>2-комн.</h4><p class="muted">Для семьи: две спальни, кухня-гостиная, место под гардероб. Баланс приватности.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
-        <div class="card"><h4>3-комн.</h4><p class="muted">Для большой семьи: просторная гостиная, 3 спальни, хранение на годы вперёд.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
+        <div class="card"><h4>1-комн.</h4><p class="muted">Для пар: кухня-гостиная, спальня, лоджия. Лёгкий старт в своём жилье.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
+        <div class="card"><h4>2-комн.</h4><p class="muted">Для семьи: две спальни, кухня-гостиная, место для гардероба. Баланс приватности и общего пространства.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
+        <div class="card"><h4>3-комн.</h4><p class="muted">Для большой семьи: просторная гостиная, 3 спальни, хранение и комфорт на годы вперёд.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
       </div>
     </section>
 
@@ -64,15 +72,17 @@
       <div class="grid gallery">
         <img src="assets/plan.jpg" alt="План ЖК Шафран" />
         <img src="assets/facade.jpg" alt="Фасад ЖК Шафран" />
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Интерьер" />
+        <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=900&q=80" alt="Лаунж" />
       </div>
     </section>
 
     <section id="pricing" class="section cards">
       <div class="section-title"><span>Цены и условия</span></div>
       <div class="grid">
-        <div class="card"><h3>Ипотека</h3><p>Поможем с одобрением, прозрачные платежи, индивидуальный расчёт.</p></div>
-        <div class="card"><h3>Рассрочка</h3><p>Гибкие взносы без скрытых платежей. Подберём комфортный график.</p></div>
-        <div class="card"><h3>Акции</h3><p>Спецпредложения для семей и пар. Уточните у менеджера.</p></div>
+        <div class="card"><h3>Ипотека</h3><p>Помощь с одобрением, прозрачные платежи, индивидуальный расчёт под семью.</p></div>
+        <div class="card"><h3>Рассрочка</h3><p>Гибкие условия и комфортные взносы без скрытых платежей.</p></div>
+        <div class="card"><h3>Акции</h3><p>Спецпредложения для семей и пар — уточните у менеджера.</p></div>
       </div>
     </section>
 
