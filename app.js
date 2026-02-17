@@ -4,7 +4,7 @@ function smoothScroll(target) {
   if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-document.querySelectorAll('nav a, [data-scroll]').forEach(a => {
+document.querySelectorAll('nav a, [data-scroll], .nav-btn').forEach(a => {
   a.addEventListener('click', (e) => {
     e.preventDefault();
     const href = a.getAttribute('href') || a.dataset.scroll;
@@ -12,18 +12,32 @@ document.querySelectorAll('nav a, [data-scroll]').forEach(a => {
   });
 });
 
-// Form submission (dummy)
+// Telegram WebApp API
+if (window.Telegram && window.Telegram.WebApp) {
+  const tg = window.Telegram.WebApp;
+  tg.expand();
+}
+
+// Form submission stub (send to bot endpoint placeholder)
 const form = document.getElementById('lead-form');
 const statusEl = document.getElementById('form-status');
 if (form) {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const formData = new FormData(form);
     const name = formData.get('name');
     const phone = formData.get('phone');
-    statusEl.textContent = 'Отправлено! Менеджер свяжется с вами.';
-    statusEl.style.color = '#2e5f46';
-    console.log('Lead:', { name, phone });
+    statusEl.textContent = 'Отправляем...';
+    try {
+      // TODO: заменить на реальный бот/сервер
+      // await fetch('/lead', { method: 'POST', body: JSON.stringify({name, phone}) });
+      console.log('Lead:', { name, phone });
+      statusEl.textContent = 'Отправлено! Менеджер свяжется с вами.';
+      statusEl.style.color = '#9ae6b4';
+    } catch (err) {
+      statusEl.textContent = 'Ошибка отправки, попробуйте позже';
+      statusEl.style.color = '#fca5a5';
+    }
   });
 }
 
@@ -35,8 +49,3 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 
 document.querySelectorAll('.card, .section-title, .hero-text, .hero-visual').forEach(el => observer.observe(el));
-
-// Telegram WebApp ready hook (optional)
-if (window.Telegram && window.Telegram.WebApp) {
-  window.Telegram.WebApp.ready();
-}
