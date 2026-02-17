@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ЖК Шафран — MiniApp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="logo">ЖК Шафран</div>
+    <nav>
+      <a href="#hero">Главная</a>
+      <a href="#about">О комплексе</a>
+      <a href="#benefits">Преимущества</a>
+      <a href="#plans">Планировки</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#pricing">Цены</a>
+      <a href="#contact">Заявка</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero section">
+      <div class="hero-text fade-in">
+        <p class="badge">Дербент · Семейный комфорт</p>
+        <h1>ЖК Шафран</h1>
+        <p class="lead">Современный жилой комплекс для семей и пар. Инфраструктура под рукой: садик, школа, магазины, благоустроенный двор.</p>
+        <div class="hero-actions">
+          <button class="btn primary" data-scroll="#contact">Оставить заявку</button>
+          <button class="btn ghost" data-scroll="#benefits">Преимущества</button>
+        </div>
+      </div>
+      <div class="hero-visual fade-in">
+        <div class="card-visual">Дом, уют, зелёные дворы</div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-title"><span>О комплексе</span></div>
+      <p class="muted">ЖК Шафран — семейный жилой комплекс в Дербенте. Современная архитектура, зелёные зоны, продуманная инфраструктура: детские площадки, магазины, парковка, шаговая доступность садика и школы.</p>
+    </section>
+
+    <section id="benefits" class="section cards">
+      <div class="section-title"><span>Преимущества</span></div>
+      <div class="grid">
+        <div class="card fade-in"><h3>Инфраструктура</h3><p>Садик, школа, магазины и сервисы — рядом. Экономия времени для семей.</p></div>
+        <div class="card fade-in"><h3>Уютные дворы</h3><p>Благоустройство, освещение, детские и спортивные зоны, озеленение.</p></div>
+        <div class="card fade-in"><h3>Планировки</h3><p>Функциональные варианты для пар и семей: 1–3 комнаты, светлые кухни-гостиные.</p></div>
+        <div class="card fade-in"><h3>Транспорт и парковка</h3><p>Парковочные места и удобный выезд. Всё для комфортного передвижения.</p></div>
+      </div>
+    </section>
+
+    <section id="plans" class="section">
+      <div class="section-title"><span>Планировки</span></div>
+      <div class="grid plans">
+        <div class="card fade-in"><h4>1-комн.</h4><p class="muted">От 38 м² · Для пар · Кухня-гостиная, спальня, лоджия.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
+        <div class="card fade-in"><h4>2-комн.</h4><p class="muted">От 55 м² · Для семьи · Две спальни, кухня-гостиная, гардероб.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
+        <div class="card fade-in"><h4>3-комн.</h4><p class="muted">От 72 м² · Для большой семьи · Просторная гостиная, 3 спальни.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-title"><span>Галерея</span></div>
+      <div class="grid gallery">
+        <div class="ph">Фасад</div>
+        <div class="ph">Двор</div>
+        <div class="ph">Интерьер</div>
+        <div class="ph">Лаунж</div>
+      </div>
+    </section>
+
+    <section id="pricing" class="section cards">
+      <div class="section-title"><span>Цены и условия</span></div>
+      <div class="grid">
+        <div class="card fade-in">
+          <h3>Ипотека</h3>
+          <p>Помощь с одобрением, прозрачные платежи, индивидуальный расчёт.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Рассрочка</h3>
+          <p>Гибкие условия, комфортные взносы, без скрытых платежей.</p>
+        </div>
+        <div class="card fade-in">
+          <h3>Акции</h3>
+          <p>Спецпредложения для семей/пар, уточняйте у менеджера.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section form-section">
+      <div class="section-title"><span>Оставить заявку</span></div>
+      <form id="lead-form" class="form card">
+        <label>Имя<input type="text" name="name" placeholder="Ваше имя" required></label>
+        <label>Телефон<input type="tel" name="phone" placeholder="+7 ___ ___-__-__" required></label>
+        <button type="submit" class="btn primary">Отправить</button>
+        <div id="form-status" class="muted"></div>
+      </form>
+    </section>
+
+    <section id="contacts" class="section">
+      <div class="section-title"><span>Контакты</span></div>
+      <div class="card contacts-card">
+        <p><strong>Адрес:</strong> Дербент, ЖК Шафран</p>
+        <p><strong>Телефон:</strong> +7 (000) 000-00-00</p>
+        <p><strong>Telegram:</strong> @manager_safran</p>
+        <p><strong>Время работы:</strong> 10:00–20:00</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">© ЖК Шафран · Семейный комфорт</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
