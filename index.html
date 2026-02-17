@@ -2,168 +2,276 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ЖК Шафран — MiniApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>ЖК Шафран — Семейный комфорт</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Loader with sliding house effect -->
+  <!-- Animated Loader -->
   <div id="loader">
     <div class="loader-house"></div>
-    <div class="loader-text">Шафран загружается...</div>
+    <div class="loader-text">ЖК Шафран</div>
   </div>
 
+  <!-- Sticky Navigation -->
   <header class="nav">
     <div class="logo">ЖК Шафран</div>
     <nav>
-      <a href="#hero">Главная</a>
+      <a href="#hero" class="active">Главная</a>
       <a href="#about">О комплексе</a>
       <a href="#benefits">Преимущества</a>
-      <a href="#plans">Планировки</a>
-      <a href="#gallery">Галерея</a>
-      <a href="#pricing">Цены</a>
-      <a href="#contact">Заявка</a>
-      <a href="#extras">Сервисы</a>
+      <a href="#pricing">Условия</a>
     </nav>
   </header>
 
   <main class="wrap">
+    <!-- Hero Section -->
     <section id="hero" class="hero section">
-      <div class="hero-text">
-        <p class="badge">Дербент · Семейный комфорт</p>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>📍</span>
+          <span>Дербент · Готов к проживанию</span>
+        </div>
         <h1>ЖК Шафран</h1>
-        <p class="lead">Комфортный комплекс для семей и пар. Готовая инфраструктура: садик, школа, магазины, безопасные дворы и парковка. Экономьте время — живите ближе к нужному.</p>
+        <p class="hero-lead">
+          Комфортный жилой комплекс для семей и пар. Садик, школа, магазины и благоустроенные дворы — всё рядом. Экономьте время, живите ближе к нужному.
+        </p>
         <div class="hero-actions">
-          <button class="btn primary" data-scroll="#contact">Оставить заявку</button>
-          <button class="btn ghost" data-scroll="#benefits">Преимущества</button>
+          <button class="btn btn-primary btn-lg" data-scroll="#contact">Оставить заявку</button>
+          <button class="btn btn-ghost btn-lg" data-scroll="#benefits">Узнать больше</button>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="card-visual">Уютные дворы · Планировки для семей · Готовая инфраструктура</div>
+        <div class="hero-card">
+          <div style="font-size: 32px; margin-bottom: 8px;">🏠</div>
+          <div>Готовая инфраструктура</div>
+          <div style="font-size: 14px; color: var(--color-text-secondary); margin-top: 4px;">Садик · Школа · Паркинг</div>
+        </div>
       </div>
     </section>
 
+    <!-- About Section -->
     <section id="about" class="section">
-      <div class="section-title"><span>О комплексе</span></div>
-      <p class="muted">ЖК Шафран — современный жилой комплекс в Дербенте. Готовая инфраструктура: садик, школа, магазины, благоустроенные дворы, парковка и безопасная среда для детей.</p>
-    </section>
-
-    <section id="benefits" class="section cards">
-      <div class="section-title"><span>Преимущества</span></div>
-      <div class="grid">
-        <div class="card"><h3>Инфраструктура</h3><p>Садик и школа рядом, магазины в шаговой доступности. Меньше поездок — больше времени с семьёй.</p></div>
-        <div class="card"><h3>Уютные дворы</h3><p>Озеленение, детские и спортивные площадки, освещение и зоны отдыха.</p></div>
-        <div class="card"><h3>Планировки</h3><p>1–3 комнаты: светлые кухни-гостиные, балконы, гардеробные. Гибко под семью.</p></div>
-        <div class="card"><h3>Парковка</h3><p>Удобные парковочные места и понятный выезд. Комфорт для автомобилистов.</p></div>
+      <div class="section-header">
+        <div class="section-title">О комплексе</div>
+      </div>
+      <div class="bento-grid">
+        <div class="card">
+          <div class="card-icon">📍</div>
+          <h3>Отличная локация</h3>
+          <p>В центре Дербента, с удобным выездом и развитой транспортной доступностью.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏗</div>
+          <h3>Готовое жильё</h3>
+          <p>Квартиры с отделкой, можно заехать и жить. Помощь с ипотекой и оформлением.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🌳</div>
+          <h3>Зелёный двор</h3>
+          <p>Озеленение, детские площадки, зоны отдыха и спортивные уголки.</p>
+        </div>
       </div>
     </section>
 
+    <!-- Benefits Section -->
+    <section id="benefits" class="section">
+      <div class="section-header">
+        <div class="section-title">Почему выбирают Шафран</div>
+      </div>
+      <div class="bento-grid bento-grid-3">
+        <div class="card">
+          <div class="card-icon">🛒</div>
+          <h3>Всё рядом</h3>
+          <p>Магазины, аптеки, кафе и сервисы в шаговой доступности. Не нужно никуда ехать.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎓</div>
+          <h3>Образование</h3>
+          <p>Детский сад и школа в 5-10 минутах пешком. Удобно для семей с детьми.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🚗</div>
+          <h3>Парковка</h3>
+          <p>Просторная гостевая парковка и удобные машино-места. Никаких проблем с авто.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Plans Section -->
     <section id="plans" class="section">
-      <div class="section-title"><span>Планировки</span></div>
-      <div class="grid plans">
-        <div class="card"><h4>1-комн.</h4><p class="muted">Для пар: кухня-гостиная, спальня, лоджия. Лёгкий старт в своём жилье.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
-        <div class="card"><h4>2-комн.</h4><p class="muted">Для семьи: две спальни, кухня-гостиная, место для гардероба. Баланс приватности и общего пространства.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
-        <div class="card"><h4>3-комн.</h4><p class="muted">Для большой семьи: просторная гостиная, 3 спальни, хранение и комфорт на годы вперёд.</p><button class="btn ghost" data-scroll="#contact">Узнать цену</button></div>
+      <div class="section-header">
+        <div class="section-title">Планировки</div>
+      </div>
+      <div class="bento-grid bento-grid-3">
+        <div class="card pricing-card">
+          <h4>1-комнатная</h4>
+          <p class="text-secondary">34–42 м²</p>
+          <p>Кухня-гостиная, спальня, лоджия. Идеально для пары или старта в своём жилье.</p>
+          <button class="btn btn-secondary" data-scroll="#contact">Узнать цену</button>
+        </div>
+        <div class="card pricing-card featured">
+          <h4>2-комнатная</h4>
+          <p class="text-secondary">54–68 м²</p>
+          <p>Две спальни, просторная гостиная, место для хранения. Баланс приватности и пространства.</p>
+          <button class="btn btn-primary" data-scroll="#contact">Узнать цену</button>
+        </div>
+        <div class="card pricing-card">
+          <h4>3-комнатная</h4>
+          <p class="text-secondary">78–92 м²</p>
+          <p>Три спальни, большая гостиная, гардеробная. Комфорт для большой семьи.</p>
+          <button class="btn btn-secondary" data-scroll="#contact">Узнать цену</button>
+        </div>
       </div>
     </section>
 
+    <!-- Gallery Section -->
     <section id="gallery" class="section">
-      <div class="section-title"><span>Галерея</span></div>
-      <div class="grid gallery">
-        <img src="assets/plan.jpg" alt="План ЖК Шафран" class="lightbox" />
-        <img src="assets/facade.jpg" alt="Фасад ЖК Шафран" class="lightbox" />
-        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Интерьер" class="lightbox" />
-        <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=900&q=80" alt="Лаунж" class="lightbox" />
+      <div class="section-header">
+        <div class="section-title">Галерея</div>
+      </div>
+      <div class="gallery">
+        <img src="assets/plan.jpg" alt="Планировка ЖК Шафран" class="lightbox-trigger" loading="lazy" />
+        <img src="assets/facade.jpg" alt="Фасад ЖК Шафран" class="lightbox-trigger" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=80" alt="Интерьер" class="lightbox-trigger" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?w=600&q=80" alt="Лаундж-зона" class="lightbox-trigger" loading="lazy" />
       </div>
     </section>
 
-    <section id="pricing" class="section cards">
-      <div class="section-title"><span>Цены и условия</span></div>
-      <div class="grid">
-        <div class="card"><h3>Ипотека</h3><p>Помощь с одобрением, прозрачные платежи, индивидуальный расчёт под семью.</p></div>
-        <div class="card"><h3>Рассрочка</h3><p>Гибкие условия и комфортные взносы без скрытых платежей.</p></div>
-        <div class="card"><h3>Акции</h3><p>Спецпредложения для семей и пар — уточните у менеджера.</p></div>
+    <!-- Pricing Section -->
+    <section id="pricing" class="section">
+      <div class="section-header">
+        <div class="section-title">Условия покупки</div>
+      </div>
+      <div class="bento-grid">
+        <div class="card">
+          <div class="card-icon">🏦</div>
+          <h3>Ипотека</h3>
+          <p>Ставка от 6%, помощь в одобрении, индивидуальный подход к каждой семье.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">📅</div>
+          <h3>Рассрочка</h3>
+          <p>Гибкие условия без банка. Первый взнос от 30%, остаток — равными платежами.</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">🎁</div>
+          <h3>Акции</h3>
+          <p>Специальные предложения для молодых семей и покупателей военной ипотеки.</p>
+        </div>
       </div>
     </section>
 
-    <section id="contact" class="section form-section">
-      <div class="section-title"><span>Оставить заявку</span></div>
-      <form id="lead-form" class="form card">
-        <label>Имя<input type="text" name="name" placeholder="Ваше имя" required></label>
-        <label>Телефон<input type="tel" name="phone" placeholder="+7 ___ ___-__-__" required></label>
-        <button type="submit" class="btn primary">Отправить</button>
-        <div id="form-status" class="muted"></div>
-      </form>
-    </section>
-
-    <section id="extras" class="section">
-      <div class="section-title"><span>Сервисы</span></div>
-      <div class="grid cards">
-        <div class="card">
-          <h3>Калькулятор платежа</h3>
-          <label>Стоимость, ₽<input type="number" id="price" placeholder="5 000 000" /></label>
-          <label>Первый взнос, ₽<input type="number" id="down" placeholder="1 000 000" /></label>
-          <label>Срок, лет<input type="number" id="years" placeholder="20" /></label>
-          <button class="btn ghost" id="calc-btn">Рассчитать</button>
-          <div id="calc-result" class="muted"></div>
-        </div>
-        <div class="card">
-          <h3>5 минут до</h3>
-          <ul class="muted">
-            <li>Садик — 5 мин</li>
-            <li>Школа — 6 мин</li>
-            <li>Магазин — 4 мин</li>
-            <li>Парк — 8 мин</li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Быстрые ответы</h3>
-          <div class="chips">
-            <button class="chip" data-answer="Цена за м²: уточняйте у менеджера, есть акции для семей.">Цена за м²</button>
-            <button class="chip" data-answer="Рассрочка: гибкие условия, без скрытых платежей.">Рассрочка</button>
-            <button class="chip" data-answer="Документы готовы, помощь с ипотекой и сделкой.">Документы</button>
+    <!-- Calculator Section -->
+    <section id="calculator" class="section">
+      <div class="section-header">
+        <div class="section-title">Калькулятор ипотеки</div>
+      </div>
+      <div class="card">
+        <div class="bento-grid bento-grid-3" style="margin-bottom: 16px;">
+          <div class="form-group">
+            <label class="form-label">Стоимость, ₽</label>
+            <input type="number" class="form-input" id="calc-price" placeholder="5 000 000" />
           </div>
-          <div id="chip-answer" class="muted"></div>
-        </div>
-        <div class="card">
-          <h3>Действия</h3>
-          <div class="actions">
-            <a class="btn primary" href="tel:+70000000000">Позвонить</a>
-            <button class="btn ghost" id="copy-contact">Скопировать контакт</button>
-            <a class="btn ghost" href="tg://resolve?domain=manager_safran">Написать в TG</a>
+          <div class="form-group">
+            <label class="form-label">Первый взнос, ₽</label>
+            <input type="number" class="form-input" id="calc-down" placeholder="1 000 000" />
           </div>
-          <div id="copy-status" class="muted"></div>
+          <div class="form-group">
+            <label class="form-label">Срок, лет</label>
+            <input type="number" class="form-input" id="calc-years" placeholder="20" />
+          </div>
         </div>
+        <button class="btn btn-primary btn-lg" id="calc-btn" style="width: 100%;">Рассчитать</button>
+        <div id="calc-result" style="margin-top: 16px; text-align: center; font-size: 18px; font-weight: 600;"></div>
       </div>
     </section>
 
+    <!-- Quick Answers Section -->
+    <section id="faq" class="section">
+      <div class="section-header">
+        <div class="section-title">Частые вопросы</div>
+      </div>
+      <div class="card">
+        <div class="chips">
+          <button class="chip" data-answer="Минимальная цена за 1-комнатную квартиру — от 3,2 млн ₽. Актуальные цены уточняйте у менеджера.">Цена</button>
+          <button class="chip" data-answer="Рассрочка без банка: первый взнос от 30%, остаток — до 2 лет равными платежами. Без скрытых комиссий.">Рассрочка</button>
+          <button class="chip" data-answer="Документы на квартиру готовы. Поможем с регистрацией права собственности через МФЦ или нотариуса.">Документы</button>
+          <button class="chip" data-answer="Срок сдачи — дом уже заселён. Можно заехать сразу после подписания договора.">Срок сдачи</button>
+        </div>
+        <div id="chip-answer" style="margin-top: 16px; padding: 12px; background: var(--color-surface); border-radius: var(--radius-md);"></div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <div class="section-title">Оставить заявку</div>
+      </div>
+      <div class="card" style="max-width: 500px; margin: 0 auto;">
+        <form id="lead-form">
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">Ваше имя</label>
+            <input type="text" name="name" class="form-input" placeholder="Иван" required />
+          </div>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label">Телефон</label>
+            <input type="tel" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required />
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">Отправить заявку</button>
+          <div id="form-status" style="margin-top: 12px; text-align: center; font-size: 14px;"></div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contacts Section -->
     <section id="contacts" class="section">
-      <div class="section-title"><span>Контакты</span></div>
-      <div class="card contacts-card">
-        <p><strong>Адрес:</strong> Дербент, ЖК Шафран</p>
-        <p><strong>Телефон:</strong> +7 (000) 000-00-00</p>
-        <p><strong>Telegram:</strong> @manager_safran</p>
-        <p><strong>Время работы:</strong> 10:00–20:00</p>
+      <div class="section-header">
+        <div class="section-title">Контакты</div>
+      </div>
+      <div class="card" style="text-align: center;">
+        <p style="margin-bottom: 12px;"><strong>Адрес:</strong> Дербент, ЖК Шафран</p>
+        <p style="margin-bottom: 12px;"><strong>Телефон:</strong> <a href="tel:+70000000000" style="color: var(--color-primary);">+7 (000) 000-00-00</a></p>
+        <p style="margin-bottom: 12px;"><strong>Telegram:</strong> <a href="tg://resolve?domain=manager_safran" style="color: var(--color-primary);">@manager_safran</a></p>
+        <p><strong>Время работы:</strong> 10:00 – 20:00</p>
       </div>
     </section>
   </main>
 
-  <div class="bottom-nav">
-    <div class="nav-btn" data-scroll="#hero"><span>🏠</span>Главная</div>
-    <div class="nav-btn" data-scroll="#benefits"><span>⭐</span>Плюсы</div>
-    <div class="nav-btn" data-scroll="#plans"><span>📐</span>Планировки</div>
-    <div class="nav-btn" data-scroll="#gallery"><span>🖼</span>Галерея</div>
-    <div class="nav-btn" data-scroll="#contact"><span>✉️</span>Заявка</div>
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+    <a href="#hero" class="nav-item">
+      <span>🏠</span>
+      <span>Главная</span>
+    </a>
+    <a href="#benefits" class="nav-item">
+      <span>⭐</span>
+      <span>Плюсы</span>
+    </a>
+    <a href="#plans" class="nav-item">
+      <span>📐</span>
+      <span>Планировки</span>
+    </a>
+    <a href="#gallery" class="nav-item">
+      <span>🖼</span>
+      <span>Галерея</span>
+    </a>
+    <a href="#contact" class="nav-item">
+      <span>✉️</span>
+      <span>Заявка</span>
+    </a>
+  </nav>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
   </div>
 
-  <div id="lightbox" class="lightbox-overlay">
-    <div class="lightbox-content">
-      <span id="lightbox-close">×</span>
-      <img id="lightbox-img" src="" alt="" />
-    </div>
-  </div>
-
-  <footer class="footer">© ЖК Шафран · Семейный комфорт</footer>
+  <!-- Footer -->
+  <footer class="footer">
+    © 2026 ЖК Шафран · Семейный комфорт в Дербенте
+  </footer>
 
   <script src="app.js"></script>
 </body>
