@@ -23,7 +23,7 @@
       <a href="#gallery">Галерея</a>
       <a href="#pricing">Цены</a>
       <a href="#contact">Заявка</a>
-      <a href="#contacts">Контакты</a>
+      <a href="#extras">Сервисы</a>
     </nav>
   </header>
 
@@ -32,7 +32,7 @@
       <div class="hero-text">
         <p class="badge">Дербент · Семейный комфорт</p>
         <h1>ЖК Шафран</h1>
-        <p class="lead">Комфортный комплекс для семей и пар. Инфраструктура под рукой: садик, школа, магазины, безопасные дворы и парковка. Экономьте время — живите ближе к нужному.</p>
+        <p class="lead">Комфортный комплекс для семей и пар. Готовая инфраструктура: садик, школа, магазины, безопасные дворы и парковка. Экономьте время — живите ближе к нужному.</p>
         <div class="hero-actions">
           <button class="btn primary" data-scroll="#contact">Оставить заявку</button>
           <button class="btn ghost" data-scroll="#benefits">Преимущества</button>
@@ -70,10 +70,10 @@
     <section id="gallery" class="section">
       <div class="section-title"><span>Галерея</span></div>
       <div class="grid gallery">
-        <img src="assets/plan.jpg" alt="План ЖК Шафран" />
-        <img src="assets/facade.jpg" alt="Фасад ЖК Шафран" />
-        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Интерьер" />
-        <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=900&q=80" alt="Лаунж" />
+        <img src="assets/plan.jpg" alt="План ЖК Шафран" class="lightbox" />
+        <img src="assets/facade.jpg" alt="Фасад ЖК Шафран" class="lightbox" />
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Интерьер" class="lightbox" />
+        <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?auto=format&fit=crop&w=900&q=80" alt="Лаунж" class="lightbox" />
       </div>
     </section>
 
@@ -96,6 +96,47 @@
       </form>
     </section>
 
+    <section id="extras" class="section">
+      <div class="section-title"><span>Сервисы</span></div>
+      <div class="grid cards">
+        <div class="card">
+          <h3>Калькулятор платежа</h3>
+          <label>Стоимость, ₽<input type="number" id="price" placeholder="5 000 000" /></label>
+          <label>Первый взнос, ₽<input type="number" id="down" placeholder="1 000 000" /></label>
+          <label>Срок, лет<input type="number" id="years" placeholder="20" /></label>
+          <button class="btn ghost" id="calc-btn">Рассчитать</button>
+          <div id="calc-result" class="muted"></div>
+        </div>
+        <div class="card">
+          <h3>5 минут до</h3>
+          <ul class="muted">
+            <li>Садик — 5 мин</li>
+            <li>Школа — 6 мин</li>
+            <li>Магазин — 4 мин</li>
+            <li>Парк — 8 мин</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Быстрые ответы</h3>
+          <div class="chips">
+            <button class="chip" data-answer="Цена за м²: уточняйте у менеджера, есть акции для семей.">Цена за м²</button>
+            <button class="chip" data-answer="Рассрочка: гибкие условия, без скрытых платежей.">Рассрочка</button>
+            <button class="chip" data-answer="Документы готовы, помощь с ипотекой и сделкой.">Документы</button>
+          </div>
+          <div id="chip-answer" class="muted"></div>
+        </div>
+        <div class="card">
+          <h3>Действия</h3>
+          <div class="actions">
+            <a class="btn primary" href="tel:+70000000000">Позвонить</a>
+            <button class="btn ghost" id="copy-contact">Скопировать контакт</button>
+            <a class="btn ghost" href="tg://resolve?domain=manager_safran">Написать в TG</a>
+          </div>
+          <div id="copy-status" class="muted"></div>
+        </div>
+      </div>
+    </section>
+
     <section id="contacts" class="section">
       <div class="section-title"><span>Контакты</span></div>
       <div class="card contacts-card">
@@ -113,6 +154,13 @@
     <div class="nav-btn" data-scroll="#plans"><span>📐</span>Планировки</div>
     <div class="nav-btn" data-scroll="#gallery"><span>🖼</span>Галерея</div>
     <div class="nav-btn" data-scroll="#contact"><span>✉️</span>Заявка</div>
+  </div>
+
+  <div id="lightbox" class="lightbox-overlay">
+    <div class="lightbox-content">
+      <span id="lightbox-close">×</span>
+      <img id="lightbox-img" src="" alt="" />
+    </div>
   </div>
 
   <footer class="footer">© ЖК Шафран · Семейный комфорт</footer>
